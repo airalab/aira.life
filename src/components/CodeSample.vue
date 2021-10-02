@@ -71,19 +71,23 @@ div {
   font-family: Roboto, sans-serif;
 }
 .wrapper {
-  border: 1px solid black;
-  background-color: var(--day-secondary);
+  transition: all 1s;
+  margin-top: 0;
+  border: 1px solid var(--snippet-border);
+  background-color: var(--secondary);
   width: 900px;
   height: 470px;
-  box-shadow: 20px 20px 0 var(--day-main);
+  box-shadow: 20px 20px 0 var(--main);
   display: flex;
   flex-direction: column;
+  color: var(--gray-inverted)
 }
 
 .header {
+  transition: all 1s;
   width: 100%;
   height: 60px;
-  background-color: var(--day-gray);
+  background-color: var(--gray);
   display: flex;
   align-items: center;
 }
@@ -123,19 +127,20 @@ svg.day, svg.night {
 }
 
 a {
-  color: var(--day-main);
+  transition: all 1s;
+  color: var(--main);
   text-decoration: none;
+  display: inline;
 }
-/*.download a {*/
-/*  color: var(--day-main)*/
-/*}*/
 
 .code {
-  background-color: var(--day-gray);
+  transition: all 1s;
+  background-color: var(--gray);
   padding: 30px 30px 30px 10px;
   font-family: Roboto Mono, sans-serif;
   font-weight: 400;
   font-size: 11pt;
+  color: var(--secondary-inverted)
 }
 
 .docs {

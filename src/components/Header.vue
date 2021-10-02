@@ -59,18 +59,9 @@
       </svg>
     </div>
     <div class="theme-switch">
-      <button>
-        <!--     // Day   -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="34.385" viewBox="0 0 32 34.385">
-          <g id="Group_4927" data-name="Group 4927" transform="translate(-16.646)">
-            <g id="Group_4926" data-name="Group 4926" transform="translate(16.646)">
-              <path id="Path_3807" data-name="Path 3807" d="M48.39,24.881a1.15,1.15,0,0,0-1.277-.355,12.125,12.125,0,0,1-4.106.69A12.6,12.6,0,0,1,35.924,2.187,1.146,1.146,0,0,0,35.445.1,11.127,11.127,0,0,0,33.838,0,17.192,17.192,0,1,0,48.477,26.206,1.154,1.154,0,0,0,48.39,24.881Z" transform="translate(-16.646 0)" fill="#23aefa"/>
-            </g>
-          </g>
-        </svg>
-
+      <button @click="changeTheme">
         <!--     // Night-->
-        <svg class="night-logo" id="Group_4938" data-name="Group 4938" xmlns="http://www.w3.org/2000/svg" width="45.16"
+        <svg :class="{'hidden': theme === 'day'}" id="Group_4938" data-name="Group 4938" xmlns="http://www.w3.org/2000/svg" width="45.16"
              height="45.16" viewBox="0 0 45.16 45.16">
           <g id="Group_4937" data-name="Group 4937">
             <path id="Path_3808" data-name="Path 3808"
@@ -119,15 +110,58 @@
             </g>
           </g>
         </svg>
+        <!--     // Day   -->
+        <svg :class="{'hidden': theme === 'night'}" xmlns="http://www.w3.org/2000/svg" width="32" height="34.385" viewBox="0 0 32 34.385">
+          <g id="Group_4927" data-name="Group 4927" transform="translate(-16.646)">
+            <g id="Group_4926" data-name="Group 4926" transform="translate(16.646)">
+              <path id="Path_3807" data-name="Path 3807" d="M48.39,24.881a1.15,1.15,0,0,0-1.277-.355,12.125,12.125,0,0,1-4.106.69A12.6,12.6,0,0,1,35.924,2.187,1.146,1.146,0,0,0,35.445.1,11.127,11.127,0,0,0,33.838,0,17.192,17.192,0,1,0,48.477,26.206,1.154,1.154,0,0,0,48.39,24.881Z" transform="translate(-16.646 0)" fill="#23aefa"/>
+            </g>
+          </g>
+        </svg>
       </button>
-
+<!--      <button @click="test">show</button>-->
+<!--      <button v-show="counter%2===0">test</button>-->
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Header"
+  name: "Header",
+  data() {
+    return {
+      theme: 'day',
+      // counter: 0
+    }
+  },
+  methods: {
+    changeTheme() {
+      let style = getComputedStyle(document.documentElement)
+      let styles = document.documentElement.style
+      if (style.getPropertyValue('--main') === style.getPropertyValue('--palette-day-main')) {
+        styles.setProperty('--main', style.getPropertyValue('--palette-night-main'))
+        styles.setProperty('--gray', style.getPropertyValue('--palette-night-secondary'))
+        styles.setProperty('--secondary', style.getPropertyValue('--palette-night-gray'))
+        styles.setProperty('--secondary-inverted', style.getPropertyValue('--palette-day-gray'))
+        styles.setProperty('--gray-inverted', style.getPropertyValue('--palette-day-secondary'))
+        styles.setProperty('--snippet-border', style.getPropertyValue('--palette-night-snippet-border'))
+        styles.setProperty('--snippet-header', style.getPropertyValue('--palette-night-snippet-header'))
+        this.theme = 'night'
+        console.log('switched to night')
+        console.log(this.theme === 'night')
+      } else if (style.getPropertyValue('--main') === style.getPropertyValue('--palette-night-main')) {
+        styles.setProperty('--main', style.getPropertyValue('--palette-day-main'))
+        styles.setProperty('--gray', style.getPropertyValue('--palette-day-gray'))
+        styles.setProperty('--secondary', style.getPropertyValue('--palette-day-secondary'))
+        styles.setProperty('--secondary-inverted', style.getPropertyValue('--palette-night-gray'))
+        styles.setProperty('--gray-inverted', style.getPropertyValue('--palette-night-secondary'))
+        styles.setProperty('--snippet-border', style.getPropertyValue('--palette-night-secondary'))
+        styles.setProperty('--snippet-header', style.getPropertyValue('--palette-night-secondary'))
+        this.theme = 'day'
+        console.log('switched to day')
+      }
+    }
+  }
 }
 </script>
 
@@ -136,11 +170,14 @@ export default {
 .logo svg {
   transform: translateX(50%) translateY(50%) scale(1.5);
   margin-top: 50px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 1s;
 }
 
 .wrapper{
   z-index: 5;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   margin: 20px 20px 0;
@@ -149,19 +186,27 @@ export default {
   justify-content: space-between;
 }
 
-svg {
-
-  /*stroke: black;*/
-}
-
 button {
   background-color: transparent;
   border: none;
 }
 
-.night-logo{
-  display: none;
+.hidden{
+  width: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0);
+  /*display: none;*/
+  transition: all 1s;
 }
 
+.theme-switch {
+  margin-right: 10px;
+
+}
+.theme-switch button {
+  display: flex;
+  align-items: center;
+}
 
 </style>
