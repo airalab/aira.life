@@ -391,9 +391,10 @@ export default {
     margin-top: 200px;
   }
 
-  .inner-wrapper .code-snippet .wrapper {
+  .code-snippet .wrapper {
     width: 650px;
     height: 450px;
+    transition: all .7s;
   }
 
   .code-snippet .wrapper .header {
@@ -455,6 +456,9 @@ export default {
     transition: all .7s;
   }
 
+  #block2 .small-wrapper ~div :not(:first-child) {
+    margin-left: -50px;
+  }
 
   #block3.filler_1 .coins-and-ideas {
     margin-top: 50px;
@@ -477,6 +481,7 @@ export default {
   #block5.filler_1 .drone-and-margin {
     margin-top: 50px;
     transition: all .7s;
+    margin-left: 80px;
   }
 
 }

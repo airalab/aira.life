@@ -92,6 +92,10 @@ export default {
     padding-bottom: 15px;
     transition: all .7s;
   }
+  div.wrapper {
+    height: 320px;
+    transition: all .7s;
+  }
 }
 
 div {
