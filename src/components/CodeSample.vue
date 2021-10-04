@@ -3,39 +3,19 @@
     <div class="header">
       <div class="buttons">
         <svg class="day" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
-          <g id="Ellipse_1774" data-name="Ellipse 1774" fill="#fff" stroke="#707070" stroke-width="1">
+          <g class="header-button" id="Ellipse_1774" data-name="Ellipse 1774" fill="var(--snippet-buttons)" stroke="#707070" stroke-width="1">
             <circle cx="6.5" cy="6.5" r="6.5" stroke="none"/>
             <circle cx="6.5" cy="6.5" r="6" fill="none"/>
           </g>
         </svg>
         <svg class="day" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
-          <g id="Ellipse_1774" data-name="Ellipse 1774" fill="#fff" stroke="#707070" stroke-width="1">
+          <g class="header-button" id="Ellipse_1774" data-name="Ellipse 1774" fill="var(--snippet-buttons)" stroke="#707070" stroke-width="1">
             <circle cx="6.5" cy="6.5" r="6.5" stroke="none"/>
             <circle cx="6.5" cy="6.5" r="6" fill="none"/>
           </g>
         </svg>
         <svg class="day" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
-          <g id="Ellipse_1774" data-name="Ellipse 1774" fill="#fff" stroke="#707070" stroke-width="1">
-            <circle cx="6.5" cy="6.5" r="6.5" stroke="none"/>
-            <circle cx="6.5" cy="6.5" r="6" fill="none"/>
-          </g>
-        </svg>
-
-<!--    // Night buttons    -->
-        <svg class="night" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
-          <g id="Ellipse_1774" data-name="Ellipse 1774" fill="#171f24" stroke="#707070" stroke-width="1">
-            <circle cx="6.5" cy="6.5" r="6.5" stroke="none"/>
-            <circle cx="6.5" cy="6.5" r="6" fill="none"/>
-          </g>
-        </svg>
-        <svg class="night" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
-          <g id="Ellipse_1774" data-name="Ellipse 1774" fill="#171f24" stroke="#707070" stroke-width="1">
-            <circle cx="6.5" cy="6.5" r="6.5" stroke="none"/>
-            <circle cx="6.5" cy="6.5" r="6" fill="none"/>
-          </g>
-        </svg>
-        <svg class="night" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
-          <g id="Ellipse_1774" data-name="Ellipse 1774" fill="#171f24" stroke="#707070" stroke-width="1">
+          <g class="header-button" id="Ellipse_1774" data-name="Ellipse 1774" fill="var(--snippet-buttons)" stroke="#707070" stroke-width="1">
             <circle cx="6.5" cy="6.5" r="6.5" stroke="none"/>
             <circle cx="6.5" cy="6.5" r="6" fill="none"/>
           </g>
