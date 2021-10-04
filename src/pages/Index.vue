@@ -161,7 +161,7 @@ export default {
   },
   methods: {
     handleScroll(event) {
-      if(process.isClient) {
+      if (process.isClient) {
         let scrollDirection = window.scrollY > this.scrollTop ? 'down' : 'up'
         this.scrollTop = window.scrollY
         let blocks = [...document.getElementsByClassName('filler_1')]
@@ -225,12 +225,12 @@ export default {
     },
   },
   created() {
-    if(process.isClient) {
+    if (process.isClient) {
       window.addEventListener('scroll', this.handleScroll)
     }
   },
   destroyed() {
-    if(process.isClient) {
+    if (process.isClient) {
       window.removeEventListener('scroll', this.handleScroll)
     }
   }
@@ -390,6 +390,7 @@ export default {
     right: 70px;
     margin-top: 200px;
   }
+
   .inner-wrapper .code-snippet .wrapper {
     width: 650px;
     height: 450px;
@@ -401,6 +402,7 @@ export default {
     align-items: center;
     transition: all .7s;
   }
+
   .code-snippet .wrapper .title {
     margin: 0;
     transition: all .7s;
@@ -432,9 +434,10 @@ export default {
     margin-top: 20px;
     transition: all .7s;
   }
+
   .filler_1 .small-wrapper {
     transition: all .7s;
-    width: 80%;
+    width: 70%;
   }
 
   .dot {
@@ -452,10 +455,6 @@ export default {
     transition: all .7s;
   }
 
-  .filler_1 .small-wrapper {
-    transition: all .7s;
-    width: 70%;
-  }
 
   #block3.filler_1 .coins-and-ideas {
     margin-top: 50px;
@@ -468,6 +467,7 @@ export default {
     margin-top: -20px;
     transition: all .7s;
   }
+
   #block4 .robot-and-git-and-robonomics .git-and-robonomics-margins {
     transition: all .7s;
     left: 0;
