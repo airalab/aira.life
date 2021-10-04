@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="header-wrapper">
     <div class="logo">
       <svg id="AIRA_logo" xmlns="http://www.w3.org/2000/svg" width="255.315" height="59.706"
            viewBox="0 0 255.315 59.706">
@@ -60,7 +60,7 @@
     </div>
     <div class="theme-switch">
       <button @click="changeTheme">
-        <!--     // Night-->
+        <!--     // To Night-->
         <svg :class="{'hidden': theme === 'day'}" id="Group_4938" data-name="Group 4938" xmlns="http://www.w3.org/2000/svg" width="45.16"
              height="45.16" viewBox="0 0 45.16 45.16">
           <g id="Group_4937" data-name="Group 4937">
@@ -110,7 +110,7 @@
             </g>
           </g>
         </svg>
-        <!--     // Day   -->
+        <!--     // To Day   -->
         <svg :class="{'hidden': theme === 'night'}" xmlns="http://www.w3.org/2000/svg" width="32" height="34.385" viewBox="0 0 32 34.385">
           <g id="Group_4927" data-name="Group 4927" transform="translate(-16.646)">
             <g id="Group_4926" data-name="Group 4926" transform="translate(16.646)">
@@ -119,8 +119,6 @@
           </g>
         </svg>
       </button>
-<!--      <button @click="test">show</button>-->
-<!--      <button v-show="counter%2===0">test</button>-->
     </div>
   </div>
 </template>
@@ -131,7 +129,6 @@ export default {
   data() {
     return {
       theme: 'day',
-      // counter: 0
     }
   },
   methods: {
@@ -146,9 +143,9 @@ export default {
         styles.setProperty('--gray-inverted', style.getPropertyValue('--palette-day-secondary'))
         styles.setProperty('--snippet-border', style.getPropertyValue('--palette-night-snippet-border'))
         styles.setProperty('--snippet-header', style.getPropertyValue('--palette-night-snippet-header'))
+        styles.setProperty('--snippet-buttons', style.getPropertyValue('--palette-night-snippet-buttons'))
+        styles.setProperty('--main-inverted', style.getPropertyValue('--palette-day-main'))
         this.theme = 'night'
-        console.log('switched to night')
-        console.log(this.theme === 'night')
       } else if (style.getPropertyValue('--main') === style.getPropertyValue('--palette-night-main')) {
         styles.setProperty('--main', style.getPropertyValue('--palette-day-main'))
         styles.setProperty('--gray', style.getPropertyValue('--palette-day-gray'))
@@ -157,8 +154,10 @@ export default {
         styles.setProperty('--gray-inverted', style.getPropertyValue('--palette-night-secondary'))
         styles.setProperty('--snippet-border', style.getPropertyValue('--palette-night-secondary'))
         styles.setProperty('--snippet-header', style.getPropertyValue('--palette-night-secondary'))
+        styles.setProperty('--snippet-buttons', style.getPropertyValue('--palette-day-secondary'))
+        styles.setProperty('--main-inverted', style.getPropertyValue('--palette-night-main'))
+
         this.theme = 'day'
-        console.log('switched to day')
       }
     }
   }
@@ -168,15 +167,15 @@ export default {
 <style scoped>
 
 .logo svg {
-  transform: translateX(50%) translateY(50%) scale(1.5);
+  margin-left: 50px;
   margin-top: 50px;
   opacity: 1;
   visibility: visible;
-  transition: all 1s;
+  transition: all .7s;
 }
 
-.wrapper{
-  z-index: 5;
+.header-wrapper {
+  z-index: 50;
   position: fixed;
   top: 0;
   left: 0;
@@ -196,17 +195,34 @@ button {
   opacity: 0;
   visibility: hidden;
   transform: scale(0);
-  /*display: none;*/
-  transition: all 1s;
+  transition: all .7s;
 }
 
 .theme-switch {
   margin-right: 10px;
-
 }
 .theme-switch button {
   display: flex;
   align-items: center;
+}
+
+@media screen and (max-width: 1175px){
+  .theme-switch path{
+    fill: white;
+  }
+}
+
+@media screen and (max-width: 1065px) {
+  .logo svg {
+    transform: scale(0.7);
+    transition: all .7s;
+    margin: 5px 0 0 -35px;
+  }
+  .theme-switch svg {
+    transform: scale(0.7);
+    transition: all .7s;
+    margin: -10px -10px 0 0;
+  }
 }
 
 </style>
