@@ -454,7 +454,7 @@ export default {
 
   .filler_1 .small-wrapper {
     transition: all .7s;
-    width: 100%;
+    width: 70%;
   }
 
   #block3.filler_1 .coins-and-ideas {
