@@ -134,7 +134,8 @@ export default {
   },
   data() {
     return {
-      scrollTop: 0
+      scrollTop: 0,
+      autoScrollLock: false
     }
   },
   metaInfo: {
@@ -144,14 +145,12 @@ export default {
     handleScroll(event) {
       let scrollDirection = window.scrollY > this.scrollTop ? 'down' : 'up'
       this.scrollTop = window.scrollY
-      console.log(`Direction ${scrollDirection}`)
       let blocks = [...document.getElementsByClassName('filler_1')]
       let lines = [...document.getElementsByClassName('lines')]
       let dots = [...document.getElementsByClassName('dot')]
 
-      let active = blocks.filter(v => ((window.scrollY - v.offsetTop + blocks[0].offsetTop) / v.offsetHeight) * 100 > -35)
-      let inactive = blocks.filter(v => ((window.scrollY - v.offsetTop + blocks[0].offsetTop) / v.offsetHeight) * 100 <= -35)
-
+      let active = blocks.filter(v => ((window.scrollY - v.offsetTop + blocks[0].offsetTop) / v.offsetHeight) * 100 > -40)
+      let inactive = blocks.filter(v => ((window.scrollY - v.offsetTop + blocks[0].offsetTop) / v.offsetHeight) * 100 <= -40)
       active.map((item, index) => {
         if (index + 1 === active.length) {
           lines[index].setAttribute('class', 'lines active')
@@ -162,36 +161,47 @@ export default {
         }
       })
       inactive.map((item, index) => {
-        lines[index + active.length].setAttribute('class', `lines step${index + active.length + 1} line${index + active.length + 1}`)
-        dots[index + active.length].setAttribute('class', `dot step${index + active.length + 1} dot${index + active.length + 1}`)
+        lines[index + active.length] && lines[index + active.length].setAttribute('class', `lines step${index + active.length + 1} line${index + active.length + 1}`)
+        dots[index + active.length] && dots[index + active.length].setAttribute('class', `dot step${index + active.length + 1} dot${index + active.length + 1}`)
       })
-
-      // blocks.map((v, index) => {
-      //   if (scrollDirection === 'down') {
-      //     if (window.scrollY - v.offsetTop + blocks[0].offsetTop > 50 && window.scrollY - v.offsetTop + blocks[0].offsetTop < 300) {
-      //       // console.log(`alert ${index}`)
-      //       window.removeEventListener('scroll', this.handleScroll)
-      //       v.setAttribute('class', 'filler_1 hidden')
-      //       // setTimeout(() => {
-      //       // let scrollDist = v.offsetTop + v.offsetHeight - window.scrollY
-      //       // window.scrollTo(0, scrollDist+v.offsetHeight)
-      //       blocks[index + 1].scrollIntoView({
-      //         block: 'end',
-      //         behavior: 'smooth'
-      //       })
-      //       this.scrollTop = window.scrollY
-      //       blocks[index + 1].setAttribute('class', 'filler_1')
-      //       setTimeout(() => {
-      //         window.addEventListener('scroll', this.handleScroll)
-      //       }, 1000)
-      //       // return v
-      //     }
-      //   } else if (scrollDirection === 'up') {
-      //     // if (window.scrollY - v.offsetTop + blocks[0].offsetTop > 50 && window.scrollY - v.offsetTop + blocks[0].offsetTop < 300)
-      //   }
-      // })
-
-
+      if (!this.autoScrollLock) {
+        blocks.map((v, index) => {
+          if (scrollDirection === 'down') {
+            if (window.scrollY - v.offsetTop + blocks[0].offsetTop > 75 && window.scrollY - v.offsetTop + blocks[0].offsetTop < 200) {
+              if (blocks[index + 1]) {
+                this.autoScrollLock = true
+                blocks[index + 1].setAttribute('class', 'filler_1')
+                blocks[index] && blocks[index].setAttribute('class', 'filler_1 hidden')
+                window.scrollTo({
+                  top: this.scrollTop + blocks[index].offsetHeight - (window.scrollY - blocks[index].offsetTop) - blocks[0].offsetTop + (blocks[index + 1].offsetTop - (v.offsetTop + v.offsetHeight)),
+                  behavior: 'smooth'
+                })
+                setTimeout(() => {
+                  this.autoScrollLock = false
+                  this.scrollTop = window.scrollY
+                }, 500)
+              }
+            }
+          }
+          if (scrollDirection === 'up') {
+            if (window.scrollY - v.offsetTop + blocks[0].offsetTop > -100 && window.scrollY - v.offsetTop + blocks[0].offsetTop < 200) {
+              if (blocks[index - 1]) {
+                this.autoScrollLock = true
+                blocks[index - 1].setAttribute('class', 'filler_1')
+                v && v.setAttribute('class', 'filler_1 hidden')
+                window.scrollTo({
+                  top: this.scrollTop - (window.scrollY - v.offsetTop) - blocks[index - 1].offsetHeight - blocks[0].offsetTop - (v.offsetTop - (blocks[index - 1].offsetTop + blocks[index - 1].offsetHeight)),
+                  behavior: 'smooth'
+                })
+                setTimeout(() => {
+                  this.autoScrollLock = false
+                  this.scrollTop = window.scrollY
+                }, 600)
+              }
+            }
+          }
+        })
+      }
     },
   },
   created() {
