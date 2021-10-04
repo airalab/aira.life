@@ -47,12 +47,38 @@ export default {
 
 <style scoped>
 
+@media screen and (min-width: 1440px) and (max-width: 1700px){
+
+  .wrapper {
+    width: 500px;
+    background-color: #171F24;
+  }
+
+}
+
+@media screen and (max-width: 1065px) {
+
+  .wrapper {
+    width: 650px;
+    height: 650px;
+    transition: all .5s;
+  }
+
+  .wrapper .content {
+    margin-left: 40px;
+    transition: all .5s;
+    width: calc(100% - 80px);
+  }
+
+}
+
 div {
   font-family: Roboto, sans-serif;
 }
+
 .wrapper {
-  transition: all 1s;
-  margin-top: 0;
+  transition: all .5s;
+  margin-top: 80px;
   border: 1px solid var(--snippet-border);
   background-color: var(--secondary);
   width: 900px;
@@ -64,12 +90,16 @@ div {
 }
 
 .header {
-  transition: all 1s;
+  transition: all .5s;
   width: 100%;
   height: 60px;
   background-color: var(--gray);
   display: flex;
   align-items: center;
+}
+
+.header-button {
+  transition: all .5s;
 }
 
 .buttons {
@@ -107,14 +137,14 @@ svg.day, svg.night {
 }
 
 a {
-  transition: all 1s;
+  transition: all .5s;
   color: var(--main);
   text-decoration: none;
   display: inline;
 }
 
 .code {
-  transition: all 1s;
+  transition: all .5s;
   background-color: var(--gray);
   padding: 30px 30px 30px 10px;
   font-family: Roboto Mono, sans-serif;
