@@ -101,6 +101,12 @@ body {
 }
 .slot-wrapper {
   padding-top: 200px;
+  transition: all .7s;
+}
+@media screen and (max-width: 1065px){
+  .slot-wrapper {
+    padding-top: 150px;
+  }
 }
 
 </style>

@@ -60,16 +60,38 @@ export default {
 
   .wrapper {
     width: 650px;
-    height: 650px;
+    max-height: 400px;
     transition: all .5s;
   }
 
   .wrapper .content {
-    margin-left: 40px;
+    margin-top: 10px;
+    margin-left: 30px;
     transition: all .5s;
-    width: calc(100% - 80px);
+    width: calc(100% - 60px);
   }
 
+  .wrapper .docs {
+    margin-top: 10px;
+  }
+
+}
+
+@media screen and (max-height: 670px) {
+  .content .download p {
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+    transition: all .7s;
+  }
+  .content .download p:last-child {
+    margin-block-end: 15px;
+    transition: all .7s;
+  }
+  .content .code {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: all .7s;
+  }
 }
 
 div {
