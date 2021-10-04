@@ -38,99 +38,117 @@
                 stroke-width="3"/>
         </svg>
       </div>
-      <div class="content-wrapper">
-        <div class="filler_1 flex-col" id="block1">
-          <div class="small-wrapper">
+      <div class="inner-wrapper">
+        <div class="content-wrapper">
+          <div class="filler_1 flex-col" id="block1">
+            <div class="small-wrapper">
+              <div class="text-wrapper">
+                Build economic<br/> interaction between <br/> human-robot and <br/> robot-robot
+              </div>
+              <div>
+                <div class="buttons">
+                  <a href="https://www.youtube.com/watch?v=1AEmpKReDzE">
+                    <PlayButton></PlayButton>
+                  </a>
+                  <a href="https://blog.aira.life/blockchain-as-refinery-for-industrial-iot-data-873b320a6ff0">
+                    <MoreButton></MoreButton>
+                  </a>
+                </div>
+                <div class="svg-wrapper-smart-contract">
+                  <SmartContract></SmartContract>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="filler_1 hidden" id="block2">
+            <div class="small-wrapper">Connect robots under <br/> decentralized <br/> computer’s control</div>
             <div>
-              Build economic interaction between human-robot and robot-robot
+              <div class="small-wrapper buttons solo-play-button">
+                <a href="https://www.youtube.com/watch?v=V_3rcP2Duv0">
+                  <PlayButton></PlayButton>
+                </a>
+              </div>
+              <div>
+                <VavesBottom></VavesBottom>
+              </div>
             </div>
-            <div class="buttons">
-              <a href="https://www.youtube.com/watch?v=1AEmpKReDzE">
-                <PlayButton></PlayButton>
-              </a>
-              <a href="https://blog.aira.life/blockchain-as-refinery-for-industrial-iot-data-873b320a6ff0">
-                <MoreButton></MoreButton>
-              </a>
+
+          </div>
+          <div class="filler_1 hidden" id="block3">
+            <div class="small-wrapper">
+              We support Ethereum and Polkadot/Substrate
             </div>
-            <div class="svg-wrapper-smart-contract">
-              <SmartContract></SmartContract>
+            <div class="coins-and-ideas">
+              <CoinsAndIdeas></CoinsAndIdeas>
             </div>
           </div>
-        </div>
-        <div class="filler_1" id="block2">
-          <div class="small-wrapper">Connect robots under decentralized computer’s control</div>
-          <div class="small-wrapper buttons solo-play-button">
-            <a href="https://www.youtube.com/watch?v=V_3rcP2Duv0">
-              <PlayButton></PlayButton>
-            </a>
+          <div class="filler_1 hidden" id="block4">
+            <div class="small-wrapper">AIRA<br/>
+              <span>is <a href="https://github.com/airalab/aira/releases" class="crossover">opensource</a> </span><br/>
+              <span>client in </span><br/>
+              <a href="https://robonomics.network" class="crossover-top">Robonomics Network</a>
+            </div>
+            <div>
+              <div class="small-wrapper buttons margins-robonomics-network-buttons">
+                <a href="https://www.youtube.com/watch?v=FpogdoXOnPA">
+                  <PlayButton></PlayButton>
+                </a>
+                <a href="https://blog.aira.life/airalab-group-positioning-and-partners-cfdedd20a96e">
+                  <MoreButton></MoreButton>
+                </a>
+              </div>
+              <div class="robot-and-git-and-robonomics">
+                <div>
+                  <Robot class="robot"></Robot>
+                </div>
+                <div>
+                  <GitAndRobonomics class="git-and-robonomics-margins"></GitAndRobonomics>
+                </div>
+              </div>
+            </div>
           </div>
-          <div></div>
-          <div>
-            <VavesBottom></VavesBottom>
-          </div>
-        </div>
-        <div class="filler_1" id="block3">
-          <div class="small-wrapper">
-            We support Ethereum and Polkadot/Substrate
-          </div>
-          <div>
-            <CoinsAndIdeas></CoinsAndIdeas>
-          </div>
-        </div>
-        <div class="filler_1" id="block4">
-          <div class="small-wrapper">AIRA
-            <i>is opensource</i>
-            client in
-            Robonomics Network
-          </div>
-          <div class="small-wrapper buttons">
-            <a>
-              <PlayButton></PlayButton>
-            </a>
-            <a href="">
-              <MoreButton></MoreButton>
-            </a>
-          </div>
-          <div>
-            <Robot></Robot>
-            <GitAndRobonomics></GitAndRobonomics>
+          <div class="filler_1 hidden" id="block5">
+            <div>View <a href="https://wiki.robonomics.network/docs/aira-overview/" class="crossover-bottom">WIKI</a>
+              and
+              <br/>
+              try ARIA
+            </div>
+            <div class="drone-and-margin">
+              <DroneAndHumanIllustration></DroneAndHumanIllustration>
+            </div>
           </div>
         </div>
-        <div class="filler_1" id="block5">
-          <Ethereum></Ethereum>
+        <div class="code-snippet">
+          <CodeSample></CodeSample>
         </div>
-        <div class="filler_1 hidden" id="block6">qwerty</div>
-      </div>
-      <div class="code-snippet">
-        <CodeSample></CodeSample>
       </div>
     </div>
   </Layout>
 </template>
 
 <script>
+import CoinsAndIdeas from "~/assets/icons/CoinsAndIdeas";
 import CodeSample from "~/components/CodeSample";
 import SmartContract from "~/assets/icons/SmartContract";
 import VavesBottom from "~/assets/icons/VavesBottom";
 import PlayButton from "~/assets/icons/PlayButton";
 import MoreButton from "~/assets/icons/MoreButton";
-import CoinsAndIdeas from "~/assets/icons/CoinsAndIdeas";
-import Ethereum from "../assets/icons/Ethereum";
 import Robot from "../assets/icons/Robot";
 import GitAndRobonomics from "../assets/icons/GitAndRobonomics";
+import DroneAndHumanIllustration from "../assets/icons/DroneAndHumanIllustration";
 
 export default {
   name: 'Index',
   components: {
+    CoinsAndIdeas,
     CodeSample,
     SmartContract,
     VavesBottom,
     PlayButton,
     MoreButton,
-    CoinsAndIdeas,
-    Ethereum,
     Robot,
-    GitAndRobonomics
+    GitAndRobonomics,
+    DroneAndHumanIllustration
   },
   data() {
     return {
