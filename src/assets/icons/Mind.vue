@@ -1,16 +1,16 @@
 <template>
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="177.587" height="164.199" viewBox="0 0 177.587 164.199">
     <defs>
-      <clipPath id="clip-path">
+      <clipPath id="clip-path-111">
         <rect id="Rectangle_3030" data-name="Rectangle 3030" width="18.519" height="25.01" transform="translate(462.835 411.709)" fill="none"/>
       </clipPath>
-      <clipPath id="clip-path-3">
+      <clipPath id="clip-path-113">
         <rect id="Rectangle_3032" data-name="Rectangle 3032" width="25.437" height="18.554" transform="translate(382.729 378.411)" fill="none"/>
       </clipPath>
-      <clipPath id="clip-path-5">
+      <clipPath id="clip-path-115">
         <rect id="Rectangle_3034" data-name="Rectangle 3034" width="18.685" height="25.315" transform="translate(315.86 448.428)" fill="none"/>
       </clipPath>
-      <clipPath id="clip-path-7">
+      <clipPath id="clip-path-117">
         <path id="Path_3629" data-name="Path 3629" d="M392.495,418.193c-15.031,3.436-16.084,15.047-16.084,15.047s-16.865-.517-23.868,8.821a19.885,19.885,0,0,0-3.113,18.679s-13.752,11.675-6.227,25.425,18.939,9.859,18.939,9.859,5.447,9.886,14.529,10.378a16.394,16.394,0,0,0,14.267-6.746s5.709,3.633,14.788,2.854,10.9-2.854,10.9-2.854,5.707,4.669,16.344,2.854,15.308-10.117,15.567-11.156c0,0,18.49-6.489,18.16-23.35-.258-13.23-3.372-16.6-19.716-20.755,0,0,2.95-11.858-9.341-17.64-8.82-4.151-18.679,2.074-18.679,2.074S412.312,417.56,397.9,417.56a24.256,24.256,0,0,0-5.41.633" fill="none"/>
       </clipPath>
     </defs>
@@ -36,9 +36,9 @@
         <path id="Path_3520" data-name="Path 3520" d="M357.636,413.954s6.572,1.506,6.363,6.729-1.01.1-4.166-1.943S354.219,414.489,357.636,413.954Z" fill="none" stroke="#1a0639" stroke-miterlimit="10" stroke-width="0.75"/>
         <g id="Group_4889" data-name="Group 4889" opacity="0.41">
           <g id="Group_4888" data-name="Group 4888">
-            <g id="Group_4887" data-name="Group 4887" clip-path="url(#clip-path)">
+            <g id="Group_4887" data-name="Group 4887" clip-path="url(#clip-path-111)">
               <g id="Group_4886" data-name="Group 4886">
-                <g id="Group_4885" data-name="Group 4885" clip-path="url(#clip-path)">
+                <g id="Group_4885" data-name="Group 4885" clip-path="url(#clip-path-111)">
                   <path id="Path_3521" data-name="Path 3521" d="M473.392,436.062s.415-3.377-3.724-6.23c-4.52-3.118-8.79-7.225-5.881-12.923,4.026-7.886,15.068-5.775,16.92-.47,1.6,4.576-.161,7.7-1.046,11.572a8.609,8.609,0,0,0,1.144,6.634s-7.378,3.489-7.413,1.417" fill="#fff"/>
                 </g>
               </g>
@@ -54,9 +54,9 @@
         <path id="Path_3528" data-name="Path 3528" d="M479.307,442.274l-.639.169a2.55,2.55,0,0,1-2.22-1.292c-.168-.634.373-.684,1.006-.852l1.849-.488c.633-.168,1.129-.391,1.3.241a2.55,2.55,0,0,1-1.292,2.222" fill="#1a0639"/>
         <g id="Group_4894" data-name="Group 4894" opacity="0.41">
           <g id="Group_4893" data-name="Group 4893">
-            <g id="Group_4892" data-name="Group 4892" clip-path="url(#clip-path-3)">
+            <g id="Group_4892" data-name="Group 4892" clip-path="url(#clip-path-113)">
               <g id="Group_4891" data-name="Group 4891">
-                <g id="Group_4890" data-name="Group 4890" clip-path="url(#clip-path-3)">
+                <g id="Group_4890" data-name="Group 4890" clip-path="url(#clip-path-113)">
                   <path id="Path_3529" data-name="Path 3529" d="M405.639,394.74s-2.7-2.065-7.258.062c-4.975,2.324-10.678,3.93-14.123-1.46-4.767-7.461,2.638-15.92,8.152-14.835,4.754.935,6.557,4.03,9.453,6.754a8.606,8.606,0,0,0,6.3,2.367s-.721,8.13-2.526,7.112" fill="#fff"/>
                 </g>
               </g>
@@ -72,9 +72,9 @@
         <path id="Path_3536" data-name="Path 3536" d="M413.989,392.778l-.177.637a2.548,2.548,0,0,1-2.238,1.262c-.631-.175-.4-.668-.225-1.3l.513-1.843c.176-.631.233-1.171.864-1a2.543,2.543,0,0,1,1.263,2.237" fill="#1a0639"/>
         <g id="Group_4899" data-name="Group 4899" opacity="0.41">
           <g id="Group_4898" data-name="Group 4898">
-            <g id="Group_4897" data-name="Group 4897" clip-path="url(#clip-path-5)">
+            <g id="Group_4897" data-name="Group 4897" clip-path="url(#clip-path-115)">
               <g id="Group_4896" data-name="Group 4896">
-                <g id="Group_4895" data-name="Group 4895" clip-path="url(#clip-path-5)">
+                <g id="Group_4895" data-name="Group 4895" clip-path="url(#clip-path-115)">
                   <path id="Path_3537" data-name="Path 3537" d="M334.4,452.1s-2.484,2.324-1.143,7.168c1.466,5.292,2.1,11.182-3.784,13.685-8.148,3.463-15.26-5.244-13.276-10.5,1.712-4.535,5.062-5.8,8.229-8.2a8.61,8.61,0,0,0,3.38-5.822s7.9,2.06,6.594,3.671" fill="#e7ed1b"/>
                 </g>
               </g>
@@ -90,7 +90,7 @@
         <path id="Path_3544" data-name="Path 3544" d="M479.087,409.457s3.9.78,5.2,8.063" fill="none" stroke="#edf029" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75"/>
         <path id="Path_3545" data-name="Path 3545" d="M474.665,400.612s10.146,3.9,11.706,12.746" fill="none" stroke="#edf029" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75"/>
         <g id="Group_4901" data-name="Group 4901">
-          <g id="Group_4900" data-name="Group 4900" clip-path="url(#clip-path-7)">
+          <g id="Group_4900" data-name="Group 4900" clip-path="url(#clip-path-117)">
             <path id="Path_3546" data-name="Path 3546" d="M375.82,459.631l1.674,11.442,4.851,2.731,1.139,7.726-2.214,3.484.593,5.007-7.306,9.83.508,3.445-5.923,9.484-14.019,2.067-5.5-4.085-8.17-56.877-2.934-18.478,3.959-4.816,6.939-1.022,14.02,10.418,1.527,10.366" fill="none" stroke="#da164c" stroke-miterlimit="10" stroke-width="0.75"/>
             <path id="Path_3547" data-name="Path 3547" d="M356.992,503.375l-3.229-21.915-9.156-6.8" fill="none" stroke="#da164c" stroke-miterlimit="10" stroke-width="0.75"/>
             <path id="Path_3548" data-name="Path 3548" d="M348.511,502.041,358.8,509.69l4.007-5.391-3.181-2.364" fill="none" stroke="#da164c" stroke-miterlimit="10" stroke-width="0.75"/>

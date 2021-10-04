@@ -33,5 +33,19 @@ export default {
 </script>
 
 <style scoped>
-
+@media screen and (min-width: 1500px) and (max-width: 1750px) {
+  path {
+    fill: var(--main);
+    transition: all .7s;
+  }
+}
+@media screen and (min-width: 1280px) and (max-width: 1500px) {
+  path {
+    fill: var(--main-inverted);
+    transition: all .7s;
+  }
+}
+path {
+  transition: all .7s;
+}
 </style>

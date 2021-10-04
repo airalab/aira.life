@@ -1,7 +1,7 @@
 <template>
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="224.044" height="220.209" viewBox="0 0 224.044 220.209">
     <defs>
-      <clipPath id="clip-path">
+      <clipPath id="clip-path-0">
         <rect id="Rectangle_2990" data-name="Rectangle 2990" width="24.606" height="20.553" transform="translate(887.104 413.701)" fill="none"/>
       </clipPath>
       <clipPath id="clip-path-3">
