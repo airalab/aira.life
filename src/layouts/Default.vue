@@ -42,15 +42,14 @@ export default {
 :root {
   transition: all 1s;
   --main: #23AEFA;
+  --main-inverted: #007EC3;
   --gray: #F0F0F0;
   --secondary: #FFFFFF;
   --gray-inverted: #171F24;
   --secondary-inverted: #000000;
   --snippet-border: #000000;
   --snipper-header: #000000;
-  /*--night-main: #007EC3;*/
-  /*--night-gray: #171F24;*/
-  /*--night-secondary: #000000;*/
+  --snippet-buttons: #FFFFFF;
 
   --palette-day-main: #23AEFA;
   --palette-day-gray: #F0F0F0;
@@ -60,6 +59,11 @@ export default {
   --palette-night-secondary: #000000;
   --palette-night-snippet-border: #707070;
   --palette-night-snippet-header: #BCBCBC;
+  --palette-night-snippet-buttons: #171F24;
+
+  --palette-icon-day-fill: #23aefa;
+  --palette-icon-night-fill: #007EC3;
+
 }
 
 body {
