@@ -2,38 +2,38 @@
   <Layout>
     <div class="wrapper">
       <div class="steps">
-        <svg class="dot step1 dot1" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
+        <svg class="dot step1 dot1" @click="goToStep(1)" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
           <circle id="Ellipse_1777" data-name="Ellipse 1777" cx="9.5" cy="9.5" r="9.5" fill="#fff"/>
         </svg>
-        <svg class="lines step1 line1" xmlns="http://www.w3.org/2000/svg" width="3" height="44" viewBox="0 0 3 44">
+        <svg class="lines step1 line1" @click="goToStep(1)" xmlns="http://www.w3.org/2000/svg" width="3" height="44" viewBox="0 0 3 44">
           <line id="Line_392" data-name="Line 392" y2="44" transform="translate(1.5)" fill="none" stroke="#fff"
                 stroke-width="3"/>
         </svg>
-        <svg class="dot step2 dot2" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
+        <svg class="dot step2 dot2" @click="goToStep(2)" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
           <circle id="Ellipse_1777" data-name="Ellipse 1777" cx="9.5" cy="9.5" r="9.5" fill="#fff"/>
         </svg>
-        <svg class="lines step2 line2" xmlns="http://www.w3.org/2000/svg" width="3" height="44" viewBox="0 0 3 44">
+        <svg class="lines step2 line2" @click="goToStep(2)" xmlns="http://www.w3.org/2000/svg" width="3" height="44" viewBox="0 0 3 44">
           <line id="Line_392" data-name="Line 392" y2="44" transform="translate(1.5)" fill="none" stroke="#fff"
                 stroke-width="3"/>
         </svg>
-        <svg class="dot step3 dot3" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
+        <svg class="dot step3 dot3" @click="goToStep(3)" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
           <circle id="Ellipse_1777" data-name="Ellipse 1777" cx="9.5" cy="9.5" r="9.5" fill="#fff"/>
         </svg>
-        <svg class="lines step3 line3" xmlns="http://www.w3.org/2000/svg" width="3" height="44" viewBox="0 0 3 44">
+        <svg class="lines step3 line3" @click="goToStep(3)" xmlns="http://www.w3.org/2000/svg" width="3" height="44" viewBox="0 0 3 44">
           <line id="Line_392" data-name="Line 392" y2="44" transform="translate(1.5)" fill="none" stroke="#fff"
                 stroke-width="3"/>
         </svg>
-        <svg class="dot step4 dot4" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
+        <svg class="dot step4 dot4" @click="goToStep(4)" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
           <circle id="Ellipse_1777" data-name="Ellipse 1777" cx="9.5" cy="9.5" r="9.5" fill="#fff"/>
         </svg>
-        <svg class="lines step4 line4" xmlns="http://www.w3.org/2000/svg" width="3" height="44" viewBox="0 0 3 44">
+        <svg class="lines step4 line4" @click="goToStep(4)" xmlns="http://www.w3.org/2000/svg" width="3" height="44" viewBox="0 0 3 44">
           <line id="Line_392" data-name="Line 392" y2="44" transform="translate(1.5)" fill="none" stroke="#fff"
                 stroke-width="3"/>
         </svg>
-        <svg class="dot step5 dot5" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
+        <svg class="dot step5 dot5" @click="goToStep(5)" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
           <circle id="Ellipse_1777" data-name="Ellipse 1777" cx="9.5" cy="9.5" r="9.5" fill="#fff"/>
         </svg>
-        <svg class="lines step5 line5" xmlns="http://www.w3.org/2000/svg" width="3" height="44" viewBox="0 0 3 44">
+        <svg class="lines step5 line5"  @click="goToStep(5)" xmlns="http://www.w3.org/2000/svg" width="3" height="44" viewBox="0 0 3 44">
           <line id="Line_392" data-name="Line 392" y2="44" transform="translate(1.5)" fill="none" stroke="#fff"
                 stroke-width="3"/>
         </svg>
@@ -230,6 +230,22 @@ export default {
         }
       }
     },
+    goToStep(step) {
+      let blocks = [...document.getElementsByClassName('filler_1')]
+      this.autoScrollLock = true
+      blocks[step - 1].setAttribute('class', 'filler_1')
+      blocks.map((item, index) => {
+        if (index !== step - 1) {
+          item.setAttribute('class', 'filler_1 hidden')
+        }
+      })
+      window.scrollTo({
+        top: blocks[step - 1].offsetTop - blocks[0].offsetTop,
+        behavior: 'smooth'
+      })
+      setTimeout(() => this.autoScrollLock = false, 600)
+
+    }
   },
   created() {
     if (process.isClient) {
@@ -649,6 +665,8 @@ a {
   align-items: center;
   flex-direction: column;
   gap: 10px;
+
+  z-index: 25;
 }
 
 .content-wrapper {
