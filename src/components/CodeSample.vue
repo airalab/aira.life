@@ -77,7 +77,7 @@ export default {
 
 }
 
-@media screen and (max-height: 670px) {
+@media screen and (max-height: 670px) and (max-width: 1065px) {
   .content .download p {
     margin-block-start: 5px;
     margin-block-end: 5px;
@@ -95,6 +95,31 @@ export default {
   div.wrapper {
     height: 320px;
     transition: all .7s;
+  }
+}
+
+@media screen and (max-height: 750px) and (min-width: 1065px) {
+  .content .download p {
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+    transition: all .7s;
+  }
+  .content .download p:last-child {
+    margin-block-end: 15px;
+    transition: all .7s;
+  }
+  .content .code {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: all .7s;
+  }
+  div.wrapper {
+    height: 320px;
+    width: 850px;
+    transition: all .7s;
+  }
+  .wrapper .content .docs {
+    margin-top: 15px;
   }
 }
 
@@ -142,10 +167,6 @@ div {
 svg.day, svg.night {
   transform: scale(1.5);
   margin: 10px;
-}
-
-.night {
-  display: none;
 }
 
 .content {

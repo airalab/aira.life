@@ -99,13 +99,20 @@ body {
 .back-image {
   transform: scale(1.5) translateX(-37%) translateY(110px);
 }
+
 .slot-wrapper {
   padding-top: 200px;
   transition: all .7s;
 }
+
 @media screen and (max-width: 1065px){
   .slot-wrapper {
     padding-top: 150px;
+  }
+  .right {
+    left: 0;
+    top: 650px;
+    z-index: -1;
   }
 }
 

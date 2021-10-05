@@ -203,7 +203,7 @@ export default {
               }
             }
             if (scrollDirection === 'up') {
-              if (window.scrollY - v.offsetTop + blocks[0].offsetTop > -100 && window.scrollY - v.offsetTop + blocks[0].offsetTop < 200) {
+              if (window.scrollY - v.offsetTop + blocks[0].offsetTop > -150 && window.scrollY - v.offsetTop + blocks[0].offsetTop < -30) {
                 if (blocks[index - 1]) {
                   this.autoScrollLock = true
                   blocks[index - 1].setAttribute('class', 'filler_1')
@@ -212,10 +212,17 @@ export default {
                     top: this.scrollTop - (window.scrollY - v.offsetTop) - blocks[index - 1].offsetHeight - blocks[0].offsetTop - (v.offsetTop - (blocks[index - 1].offsetTop + blocks[index - 1].offsetHeight)),
                     behavior: 'smooth'
                   })
+
                   setTimeout(() => {
-                    this.autoScrollLock = false
-                    this.scrollTop = window.scrollY
-                  }, 600)
+                    window.scrollTo({
+                      top: this.scrollTop - (window.scrollY - v.offsetTop) - blocks[index - 1].offsetHeight - blocks[0].offsetTop - (v.offsetTop - (blocks[index - 1].offsetTop + blocks[index - 1].offsetHeight)),
+                      behavior: 'smooth'
+                    })
+                    setTimeout(() => {
+                      this.autoScrollLock = false
+                      this.scrollTop = window.scrollY
+                    }, 600)
+                  }, 500)
                 }
               }
             }
@@ -321,7 +328,7 @@ export default {
 
   #block4 .git-and-robonomics-margins {
     margin: 0;
-    top: 400px;
+    top: 250px;
     left: -950px;
     transition: all .7s;
   }
