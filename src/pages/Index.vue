@@ -40,7 +40,7 @@
       </div>
       <div class="inner-wrapper">
         <div class="content-wrapper">
-          <div class="filler_1 flex-col" id="block1">
+          <div class="block-content-wrapper flex-col" id="block1">
             <div class="small-wrapper">
               <div class="text-wrapper">
                 Build economic<br/> interaction between <br/> human-robot and <br/> robot-robot
@@ -60,7 +60,7 @@
               </div>
             </div>
           </div>
-          <div class="filler_1 hidden" id="block2">
+          <div class="block-content-wrapper hidden" id="block2">
             <div class="small-wrapper">Connect robots under <br/> decentralized <br/> computer’s control</div>
             <div>
               <div class="small-wrapper buttons solo-play-button">
@@ -74,7 +74,7 @@
             </div>
 
           </div>
-          <div class="filler_1 hidden" id="block3">
+          <div class="block-content-wrapper hidden" id="block3">
             <div class="small-wrapper">
               We support Ethereum and Polkadot/Substrate
             </div>
@@ -82,7 +82,7 @@
               <CoinsAndIdeas></CoinsAndIdeas>
             </div>
           </div>
-          <div class="filler_1 hidden" id="block4">
+          <div class="block-content-wrapper hidden" id="block4">
             <div class="small-wrapper">AIRA<br/>
               <span>is <a href="https://github.com/airalab/aira/releases" class="crossover">opensource</a> </span><br/>
               <span>client in </span><br/>
@@ -107,7 +107,7 @@
               </div>
             </div>
           </div>
-          <div class="filler_1 hidden" id="block5">
+          <div class="block-content-wrapper hidden" id="block5">
             <div>View <a href="https://wiki.robonomics.network/docs/aira-overview/" class="crossover-bottom">WIKI</a>
               and
               <br/>
@@ -164,7 +164,7 @@ export default {
       if (process.isClient) {
         let scrollDirection = window.scrollY > this.scrollTop ? 'down' : 'up'
         this.scrollTop = window.scrollY
-        let blocks = [...document.getElementsByClassName('filler_1')]
+        let blocks = [...document.getElementsByClassName('block-content-wrapper')]
         let lines = [...document.getElementsByClassName('lines')]
         let dots = [...document.getElementsByClassName('dot')]
 
@@ -189,8 +189,8 @@ export default {
               if (window.scrollY - v.offsetTop + blocks[0].offsetTop > 75 && window.scrollY - v.offsetTop + blocks[0].offsetTop < 200) {
                 if (blocks[index + 1]) {
                   this.autoScrollLock = true
-                  blocks[index + 1].setAttribute('class', 'filler_1')
-                  blocks[index] && blocks[index].setAttribute('class', 'filler_1 hidden')
+                  blocks[index + 1].setAttribute('class', 'block-content-wrapper')
+                  blocks[index] && blocks[index].setAttribute('class', 'block-content-wrapper hidden')
                   window.scrollTo({
                     top: this.scrollTop + blocks[index].offsetHeight - (window.scrollY - blocks[index].offsetTop) - blocks[0].offsetTop + (blocks[index + 1].offsetTop - (v.offsetTop + v.offsetHeight)),
                     behavior: 'smooth'
@@ -206,8 +206,8 @@ export default {
               if (window.scrollY - v.offsetTop + blocks[0].offsetTop > -150 && window.scrollY - v.offsetTop + blocks[0].offsetTop < -30) {
                 if (blocks[index - 1]) {
                   this.autoScrollLock = true
-                  blocks[index - 1].setAttribute('class', 'filler_1')
-                  v && v.setAttribute('class', 'filler_1 hidden')
+                  blocks[index - 1].setAttribute('class', 'block-content-wrapper')
+                  v && v.setAttribute('class', 'block-content-wrapper hidden')
                   window.scrollTo({
                     top: this.scrollTop - (window.scrollY - v.offsetTop) - blocks[index - 1].offsetHeight - blocks[0].offsetTop - (v.offsetTop - (blocks[index - 1].offsetTop + blocks[index - 1].offsetHeight)),
                     behavior: 'smooth'
@@ -231,12 +231,12 @@ export default {
       }
     },
     goToStep(step) {
-      let blocks = [...document.getElementsByClassName('filler_1')]
+      let blocks = [...document.getElementsByClassName('block-content-wrapper')]
       this.autoScrollLock = true
-      blocks[step - 1].setAttribute('class', 'filler_1')
+      blocks[step - 1].setAttribute('class', 'block-content-wrapper')
       blocks.map((item, index) => {
         if (index !== step - 1) {
-          item.setAttribute('class', 'filler_1 hidden')
+          item.setAttribute('class', 'block-content-wrapper hidden')
         }
       })
       window.scrollTo({
@@ -446,20 +446,20 @@ export default {
     align-items: center;
   }
 
-  .inner-wrapper .content-wrapper .filler_1 {
+  .inner-wrapper .content-wrapper .block-content-wrapper {
     transform: scale(0.7);
     margin: -15% 0 0 -15%;
     transition: all .7s;
   }
 
-  .filler_1 .buttons {
+  .block-content-wrapper .buttons {
     display: flex;
     justify-content: flex-start;
     margin-top: 20px;
     transition: all .7s;
   }
 
-  .filler_1 .small-wrapper {
+  .block-content-wrapper .small-wrapper {
     transition: all .7s;
     width: 70%;
   }
@@ -483,7 +483,7 @@ export default {
     margin-left: -50px;
   }
 
-  #block3.filler_1 .coins-and-ideas {
+  #block3.block-content-wrapper .coins-and-ideas {
     margin-top: 50px;
     transition: all .7s;
   }
@@ -501,7 +501,7 @@ export default {
     top: 0;
   }
 
-  #block5.filler_1 .drone-and-margin {
+  #block5.block-content-wrapper .drone-and-margin {
     margin-top: 50px;
     transition: all .7s;
     margin-left: 80px;
@@ -632,7 +632,7 @@ a {
   margin-top: 40px;
 }
 
-.filler_1 {
+.block-content-wrapper {
   height: 700px;
   opacity: 1;
   visibility: visible;
@@ -645,7 +645,7 @@ a {
   pointer-events: none;
 }
 
-.filler_1:last-child {
+.block-content-wrapper:last-child {
   height: 750px;
 }
 
