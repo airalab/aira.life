@@ -203,7 +203,7 @@ export default {
               }
             }
             if (scrollDirection === 'up') {
-              if (window.scrollY - v.offsetTop + blocks[0].offsetTop > -150 && window.scrollY - v.offsetTop + blocks[0].offsetTop < -30) {
+              if (window.scrollY - v.offsetTop + blocks[0].offsetTop > -250 && window.scrollY - v.offsetTop + blocks[0].offsetTop < -30) {
                 if (blocks[index - 1]) {
                   this.autoScrollLock = true
                   blocks[index - 1].setAttribute('class', 'block-content-wrapper')
