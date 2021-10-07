@@ -262,19 +262,27 @@ export default {
 
 <style>
 
-@media screen and (min-width: 1065px) and (max-width: 1750px) {
+@media screen and (min-width: 1630px) and (max-width: 1800px) {
+  .wrapper .code-snippet {
+    transform: translateX(-50px) scale(0.8);
+    width: 700px;
+    transition: all .5s;
+  }
+}
+
+@media screen and (min-width: 1065px) and (max-width: 1630px) {
   div {
-    transition: all .7s !important;
+    transition: all .5s !important;
   }
 
   span {
-    transition: all .7s !important;
+    transition: all .5s !important;
   }
 
   .code-snippet {
-    transform: translateY(230px) translateX(-100px) scale(0.8);
+    transform: translateY(235px) translateX(calc(-50% + 100px)) scale(0.8);
     width: 700px;
-    transition: all .7s;
+    transition: all .5s;
   }
 
   .content-wrapper {
@@ -294,6 +302,7 @@ export default {
 
   #block1 .svg-wrapper-smart-contract {
     margin-right: 100px;
+    margin-left: 0;
   }
 
   .text-wrapper ~ div {
@@ -334,7 +343,7 @@ export default {
   #block4 .robot-and-git-and-robonomics .robot {
     margin-right: 200px;
     margin-top: -100px;
-    transition: all .7s;
+    transition: all .5s;
   }
 
   .robot-and-git-and-robonomics {
@@ -345,8 +354,8 @@ export default {
   #block4 .git-and-robonomics-margins {
     margin: 0;
     top: 250px;
-    left: -950px;
-    transition: all .7s;
+    left: calc(-75vw);
+    transition: all .5s;
   }
 
   #block5 {
@@ -366,30 +375,187 @@ export default {
   }
 }
 
+@media screen and (min-width: 1250px) and (max-width: 1440px) {
+  #block4.block-content-wrapper  .git-and-robonomics-margins {
+    left: -100px;
+    top: 130px;
+    transition: all .5s;
+  }
+}
+
 @media screen and (min-width: 1065px) and (max-width: 1250px) {
   .slot-wrapper .code-snippet {
-    transform: translateY(270px) scale(0.7);
-    transition: all .7s;
-    /*transform: scale(0.9);*/
+    transform: translateY(235px) translateX(calc(-40% + 120px)) scale(0.8);
+    transition: all .5s;
   }
 
   #block4 .git-and-robonomics-margins {
     margin: 0;
     top: 400px;
     left: -850px;
-    transition: all .7s;
+    transition: all .5s;
   }
 
   #block4 .small-wrapper {
     width: 500px;
   }
+  #block4 .robot-and-git-and-robonomics .robot {
+    margin-right: 150px;
+  }
+
+  #block4 .margins-robonomics-network-buttons {
+    margin-left: -35px;
+  }
 }
 
-@media screen and (max-width: 1065px) {
+@media screen and (min-width: 1065px) and (max-width: 1250px) and (min-height: 900px) {
+  .slot-wrapper .code-snippet {
+    transform: translateY(300px) translateX(calc(-40% + 120px)) scale(0.8);
+    transition: all .5s;
+  }
+}
 
+@media screen and (min-width: 1065px) and (max-width: 1250px) and (min-height: 700px) and (max-height: 900px) {
+  .slot-wrapper .code-snippet {
+    transform: translateY(250px) translateX(calc(5%)) scale(0.7);
+    transition: all .5s;
+  }
+}
+
+@media screen and (min-width: 550px) and (max-width: 1065px) {
+
+  .slot-wrapper .code-snippet {
+    transform: translateY(435px) translateX(calc(50%)) scale(calc(0.7));
+    margin-right: calc(50% - 100px);
+    transition: all .5s;
+  }
+  .wrapper .steps {
+    margin-left: 15px;
+    margin-top: -50px;
+    transform: scale(0.75);
+    transition: all .5s;
+  }
+
+  .inner-wrapper .content-wrapper {
+    margin-left: 120px;
+    max-width: calc(100% - 150px);
+    width: inherit;
+    transition: all .5s;
+  }
+
+  .content-wrapper .small-wrapper {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  #block1 .svg-wrapper-smart-contract {
+    margin-left: calc(40vw - 200px);
+    margin-top: -20px;
+    transition: all .5s;
+  }
+  #block2 .solo-play-button {
+    margin-top: 0;
+    transition: all .5s;
+  }
+
+  #block3 .coins-and-ideas {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    transition: all .5s;
+  }
+
+  #block4 br:not(:first-child) and #block4 br:not(:last-child) {
+    display: none;
+  }
+
+  #block4 .margins-robonomics-network-buttons {
+    width: inherit;
+  }
+
+  #block4 .robot-and-git-and-robonomics {
+    margin-top: -40px;
+    transition: all .5s;
+  }
+
+  #block4 .robot-and-git-and-robonomics .git-and-robonomics-margins {
+    left: calc(90vw - 600px);
+    top: 40px;
+    transition: all .5s;
+  }
+
+  #block5 .drone-and-margin {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    transition: all .5s;
+  }
+}
+
+@media screen and (min-width: 650px) and (max-width: 700px) {
+  .slot-wrapper .wrapper .code-snippet {
+    transform: translateY(380px) translateX(calc(40% - 150px)) scale(calc(0.55));
+    margin-right: 0;
+    transition: all .5s;
+  }
+
+  .inner-wrapper .content-wrapper {
+    margin-left: 120px;
+    transition: all .5s;
+  }
+}
+
+@media screen and (min-width: 550px) and (max-width: 700px) {
+  .wrapper .inner-wrapper .content-wrapper {
+    max-width: calc(100%);
+    margin-left: 0;
+    transition: all .5s;
+  }
+  .slot-wrapper .code-snippet {
+    transform: translateY(380px) translateX(calc(40% - 100px)) scale(calc(0.55));
+    transition: all .5s;
+    margin-right: 0;
+  }
+
+  .content-wrapper .block-content-wrapper {
+    transition: all .5s;
+    max-width: 100%;
+    width: calc(100% - 100px);
+    margin-left: 90px;
+    transform: scale(0.8) translateX(calc(-50% + 240px)) translateY(-80px);
+    /*transform: scale(0.8) translateX(calc(-50% + 250px));*/
+  }
+
+  .small-wrapper {
+    max-width: calc(100% - 50px);
+    transition: all .5s;
+  }
+
+  #block2 .buttons ~div {
+    margin-left: -150px;
+    margin-top: -30px;
+    transition: all .5s;
+  }
+
+  #block4 .robot-and-git-and-robonomics {
+    margin-top: -30px;
+    transition: all .5s;
+  }
+
+  #block4 .robot-and-git-and-robonomics .git-and-robonomics-margins {
+    left: 20px;
+    top: 50px;
+    transition: all .5s;
+  }
+}
+
+
+/*@media screen and (max-width: 1065px) {*/
+@media screen and (max-width: 550px) {
   .wrapper {
+
     flex-direction: column;
-    transition: all .7s;
+    transition: all .5s;
   }
 
   .wrapper .steps {
@@ -403,11 +569,11 @@ export default {
     justify-content: flex-start;
     margin-left: 40px;
     gap: 25px;
-    transition: all .7s;
+    transition: all .5s;
   }
 
   .inner-wrapper .code-snippet {
-    transition: all .7s;
+    transition: all .5s;
     transform: scale(0.5);
     width: 100vw;
     right: 70px;
@@ -417,19 +583,19 @@ export default {
   .code-snippet .wrapper {
     width: 650px;
     height: 450px;
-    transition: all .7s;
+    transition: all .5s;
   }
 
   .code-snippet .wrapper .header {
     min-height: 60px;
     justify-content: center;
     align-items: center;
-    transition: all .7s;
+    transition: all .5s;
   }
 
   .code-snippet .wrapper .title {
     margin: 0;
-    transition: all .7s;
+    transition: all .5s;
   }
 
   .code-snippet .wrapper .buttons {
@@ -437,46 +603,46 @@ export default {
     opacity: 0;
     display: none;
     transform: scale(0);
-    transition: all .7s;
+    transition: all .5s;
   }
 
   .inner-wrapper .content-wrapper {
     margin-left: 0;
-    transition: all .7s;
+    transition: all .5s;
     align-items: center;
   }
 
   .inner-wrapper .content-wrapper .block-content-wrapper {
     transform: scale(0.7);
     margin: -15% 0 0 -15%;
-    transition: all .7s;
+    transition: all .5s;
   }
 
   .block-content-wrapper .buttons {
     display: flex;
     justify-content: flex-start;
     margin-top: 20px;
-    transition: all .7s;
+    transition: all .5s;
   }
 
   .block-content-wrapper .small-wrapper {
-    transition: all .7s;
+    transition: all .5s;
     width: 70%;
   }
 
   .dot {
     transform: scale(1.5);
-    transition: all .7s;
+    transition: all .5s;
   }
 
   .dot.dot1, .dot.dot2, .dot.dot3, .dot.dot4, .dot.dot5 {
     transform: scale(1.5);
-    transition: all .7s;
+    transition: all .5s;
   }
 
   .lines {
     display: none;
-    transition: all .7s;
+    transition: all .5s;
   }
 
   #block2 .small-wrapper ~div :not(:first-child) {
@@ -485,25 +651,25 @@ export default {
 
   #block3.block-content-wrapper .coins-and-ideas {
     margin-top: 50px;
-    transition: all .7s;
+    transition: all .5s;
   }
 
   #block4 .robot-and-git-and-robonomics {
     pointer-events: none;
     margin-left: 50px;
     margin-top: -20px;
-    transition: all .7s;
+    transition: all .5s;
   }
 
   #block4 .robot-and-git-and-robonomics .git-and-robonomics-margins {
-    transition: all .7s;
+    transition: all .5s;
     left: 0;
     top: 0;
   }
 
   #block5.block-content-wrapper .drone-and-margin {
     margin-top: 50px;
-    transition: all .7s;
+    transition: all .5s;
     margin-left: 80px;
   }
 
@@ -599,7 +765,7 @@ a {
 
 #block2 .buttons a :first-child {
   margin-right: 100px;
-  transition: .7s all;
+  transition: .5s all;
 }
 
 .robot-and-git-and-robonomics {
@@ -686,7 +852,7 @@ a {
   position: fixed;
   margin-top: -100px;
   right: 100px;
-  transition: all .7s;
+  transition: all .5s;
 }
 
 .flex-col {
@@ -697,12 +863,12 @@ a {
 .dot, .lines {
   margin-bottom: 10px;
   opacity: 0.5;
-  transition: all .7s;
+  transition: all .5s;
 }
 
 .active {
   opacity: 1;
-  transition: all .7s;
+  transition: all .5s;
 }
 
 .dot1, .line1 {
@@ -711,42 +877,42 @@ a {
 
 .dot2 {
   transform: translateX(10px) translateY(5px);
-  transition: all .7s;
+  transition: all .5s;
 }
 
 .line2 {
   transform: translateX(-5px) rotate(-30deg) translateY(-13px);
-  transition: all .7s;
+  transition: all .5s;
 }
 
 .dot3 {
   transform: translateX(-10px);
-  transition: all .7s;
+  transition: all .5s;
 }
 
 .line3 {
   transform: translateX(9px) translateY(-15px) rotate(70deg);
-  transition: all .7s;
+  transition: all .5s;
 }
 
 .dot4 {
   transform: translateX(10px);
-  transition: all .7s;
+  transition: all .5s;
 }
 
 .line4 {
   transform: translateY(-10px) rotate(-50deg) translateY(-20px) translateX(5px);
-  transition: all .7s;
+  transition: all .5s;
 }
 
 .dot5 {
   transform: translateX(-15px);
-  transition: all .7s;
+  transition: all .5s;
 }
 
 .line5 {
   transform: translateX(15px) rotate(45deg) translateX(-20px) translateY(-15px);
-  transition: all .7s;
+  transition: all .5s;
 }
 
 </style>
