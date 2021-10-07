@@ -2,37 +2,27 @@
   <Layout>
     <div class="wrapper">
       <div class="steps">
-        <svg class="dot step1 dot1" @click="goToStep(1)" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
-          <circle id="Ellipse_1777" data-name="Ellipse 1777" cx="9.5" cy="9.5" r="9.5" fill="#fff"/>
-        </svg>
+        <a class="dot step1 dot1" @click="goToStep(1)"></a>
         <svg class="lines step1 line1" @click="goToStep(1)" xmlns="http://www.w3.org/2000/svg" width="3" height="44" viewBox="0 0 3 44">
           <line id="Line_392" data-name="Line 392" y2="44" transform="translate(1.5)" fill="none" stroke="#fff"
                 stroke-width="3"/>
         </svg>
-        <svg class="dot step2 dot2" @click="goToStep(2)" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
-          <circle id="Ellipse_1777" data-name="Ellipse 1777" cx="9.5" cy="9.5" r="9.5" fill="#fff"/>
-        </svg>
+        <a class="dot step2 dot2" @click="goToStep(2)"></a>
         <svg class="lines step2 line2" @click="goToStep(2)" xmlns="http://www.w3.org/2000/svg" width="3" height="44" viewBox="0 0 3 44">
           <line id="Line_392" data-name="Line 392" y2="44" transform="translate(1.5)" fill="none" stroke="#fff"
                 stroke-width="3"/>
         </svg>
-        <svg class="dot step3 dot3" @click="goToStep(3)" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
-          <circle id="Ellipse_1777" data-name="Ellipse 1777" cx="9.5" cy="9.5" r="9.5" fill="#fff"/>
-        </svg>
+        <a class="dot step3 dot3" @click="goToStep(3)"></a>
         <svg class="lines step3 line3" @click="goToStep(3)" xmlns="http://www.w3.org/2000/svg" width="3" height="44" viewBox="0 0 3 44">
           <line id="Line_392" data-name="Line 392" y2="44" transform="translate(1.5)" fill="none" stroke="#fff"
                 stroke-width="3"/>
         </svg>
-        <svg class="dot step4 dot4" @click="goToStep(4)" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
-          <circle id="Ellipse_1777" data-name="Ellipse 1777" cx="9.5" cy="9.5" r="9.5" fill="#fff"/>
-        </svg>
+        <a class="dot step4 dot4" @click="goToStep(4)"></a>
         <svg class="lines step4 line4" @click="goToStep(4)" xmlns="http://www.w3.org/2000/svg" width="3" height="44" viewBox="0 0 3 44">
           <line id="Line_392" data-name="Line 392" y2="44" transform="translate(1.5)" fill="none" stroke="#fff"
                 stroke-width="3"/>
         </svg>
-        <svg class="dot step5 dot5" @click="goToStep(5)" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
-          <circle id="Ellipse_1777" data-name="Ellipse 1777" cx="9.5" cy="9.5" r="9.5" fill="#fff"/>
-        </svg>
+        <a class="dot step5 dot5" @click="goToStep(5)"></a>
         <svg class="lines step5 line5"  @click="goToStep(5)" xmlns="http://www.w3.org/2000/svg" width="3" height="44" viewBox="0 0 3 44">
           <line id="Line_392" data-name="Line 392" y2="44" transform="translate(1.5)" fill="none" stroke="#fff"
                 stroke-width="3"/>
@@ -630,13 +620,21 @@ export default {
     width: 70%;
   }
 
-  .dot {
-    transform: scale(1.5);
+  .steps .dot {
+    margin-left: 0;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
     transition: all .5s;
+    margin-right: 0;
   }
 
   .dot.dot1, .dot.dot2, .dot.dot3, .dot.dot4, .dot.dot5 {
-    transform: scale(1.5);
+    width: 30px;
+    height: 30px;
+    margin-right: 0 !important;
+    transform: scale(1);
     transition: all .5s;
   }
 
@@ -858,6 +856,14 @@ a {
 .flex-col {
   display: flex;
   flex-direction: column;
+}
+
+.dot {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin-left: 20px;
+  background-color: white;
 }
 
 .dot, .lines {
