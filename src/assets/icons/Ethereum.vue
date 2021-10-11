@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style scoped>
-@media screen and (min-width: 1500px) and (max-width: 1750px) {
+@media screen and (min-width: 1500px) and (max-width: 1630px) {
   path {
     fill: var(--main);
     transition: all .7s;

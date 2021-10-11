@@ -558,7 +558,6 @@ export default {
     align-items: center;
     justify-content: flex-start;
     margin-left: 40px;
-    gap: 25px;
     transition: all .5s;
   }
 
@@ -627,13 +626,12 @@ export default {
     background-color: white;
     border-radius: 50%;
     transition: all .5s;
-    margin-right: 0;
+    margin-right: 25px;
   }
 
   .dot.dot1, .dot.dot2, .dot.dot3, .dot.dot4, .dot.dot5 {
     width: 30px;
     height: 30px;
-    margin-right: 0 !important;
     transform: scale(1);
     transition: all .5s;
   }
@@ -824,12 +822,9 @@ a {
   width: 100px;
   min-height: 400px;
   position: fixed;
-
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 10px;
-
   z-index: 25;
 }
 
@@ -867,7 +862,7 @@ a {
 }
 
 .dot, .lines {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   opacity: 0.5;
   transition: all .5s;
 }
