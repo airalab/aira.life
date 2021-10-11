@@ -605,6 +605,7 @@ export default {
     transform: scale(0.7);
     margin: -15% 0 0 -15%;
     transition: all .5s;
+    transition-delay: .2s;
   }
 
   .block-content-wrapper .buttons {
@@ -799,10 +800,11 @@ a {
   opacity: 1;
   visibility: visible;
   transition: all .5s;
+  transition-delay: .3s;
 }
 
 .hidden {
-  transition: all .5s;
+  transition: all .2s;
   opacity: 0;
   pointer-events: none;
 }
