@@ -2,27 +2,27 @@
   <Layout>
     <div class="wrapper">
       <div class="steps">
-        <a class="dot step1 dot1" @click="goToStep(1)"></a>
+        <g-link class="dot step1 dot1" @click.native="goToStep(1)"></g-link>
         <svg class="lines step1 line1" @click="goToStep(1)" xmlns="http://www.w3.org/2000/svg" width="3" height="44" viewBox="0 0 3 44">
           <line id="Line_392" data-name="Line 392" y2="44" transform="translate(1.5)" fill="none" stroke="#fff"
                 stroke-width="3"/>
         </svg>
-        <a class="dot step2 dot2" @click="goToStep(2)"></a>
+        <g-link class="dot step2 dot2" @click.native="goToStep(2)"></g-link>
         <svg class="lines step2 line2" @click="goToStep(2)" xmlns="http://www.w3.org/2000/svg" width="3" height="44" viewBox="0 0 3 44">
           <line id="Line_392" data-name="Line 392" y2="44" transform="translate(1.5)" fill="none" stroke="#fff"
                 stroke-width="3"/>
         </svg>
-        <a class="dot step3 dot3" @click="goToStep(3)"></a>
+        <g-link class="dot step3 dot3" @click.native="goToStep(3)"></g-link>
         <svg class="lines step3 line3" @click="goToStep(3)" xmlns="http://www.w3.org/2000/svg" width="3" height="44" viewBox="0 0 3 44">
           <line id="Line_392" data-name="Line 392" y2="44" transform="translate(1.5)" fill="none" stroke="#fff"
                 stroke-width="3"/>
         </svg>
-        <a class="dot step4 dot4" @click="goToStep(4)"></a>
+        <g-link class="dot step4 dot4" @click.native="goToStep(4)"></g-link>
         <svg class="lines step4 line4" @click="goToStep(4)" xmlns="http://www.w3.org/2000/svg" width="3" height="44" viewBox="0 0 3 44">
           <line id="Line_392" data-name="Line 392" y2="44" transform="translate(1.5)" fill="none" stroke="#fff"
                 stroke-width="3"/>
         </svg>
-        <a class="dot step5 dot5" @click="goToStep(5)"></a>
+        <g-link class="dot step5 dot5" @click.native="goToStep(5)"></g-link>
         <svg class="lines step5 line5"  @click="goToStep(5)" xmlns="http://www.w3.org/2000/svg" width="3" height="44" viewBox="0 0 3 44">
           <line id="Line_392" data-name="Line 392" y2="44" transform="translate(1.5)" fill="none" stroke="#fff"
                 stroke-width="3"/>
@@ -37,9 +37,9 @@
               </div>
               <div>
                 <div class="buttons">
-                  <a href="https://www.youtube.com/watch?v=1AEmpKReDzE">
+                  <g-link href="https://www.youtube.com/watch?v=1AEmpKReDzE">
                     <PlayButton></PlayButton>
-                  </a>
+                  </g-link>
                   <a href="https://blog.aira.life/blockchain-as-refinery-for-industrial-iot-data-873b320a6ff0">
                     <MoreButton></MoreButton>
                   </a>
@@ -62,7 +62,6 @@
                 <VavesBottom></VavesBottom>
               </div>
             </div>
-
           </div>
           <div class="block-content-wrapper hidden" id="block3">
             <div class="small-wrapper">
@@ -162,8 +161,8 @@ export default {
         let inactive = blocks.filter(v => ((window.scrollY - v.offsetTop + blocks[0].offsetTop) / v.offsetHeight) * 100 <= -40)
         active.map((item, index) => {
           if (index + 1 === active.length) {
-            lines[index].setAttribute('class', 'lines active')
-            dots[index].setAttribute('class', 'dot active')
+            lines[index].setAttribute('class', 'lines active_el')
+            dots[index].setAttribute('class', 'dot active_el')
           } else {
             lines[index].setAttribute('class', 'lines')
             dots[index].setAttribute('class', 'dot')
@@ -202,7 +201,6 @@ export default {
                     top: this.scrollTop - (window.scrollY - v.offsetTop) - blocks[index - 1].offsetHeight - blocks[0].offsetTop - (v.offsetTop - (blocks[index - 1].offsetTop + blocks[index - 1].offsetHeight)),
                     behavior: 'smooth'
                   })
-
                   setTimeout(() => {
                     window.scrollTo({
                       top: this.scrollTop - (window.scrollY - v.offsetTop) - blocks[index - 1].offsetHeight - blocks[0].offsetTop - (v.offsetTop - (blocks[index - 1].offsetTop + blocks[index - 1].offsetHeight)),
@@ -251,6 +249,39 @@ export default {
 </script>
 
 <style>
+
+@media screen and (min-width: 1630px) {
+  #block1 .svg-wrapper-smart-contract {
+    transform: scale(1.5);
+    transition: .5s;
+  }
+
+  #block2 .solo-play-button ~div {
+    transform: scale(1.4);
+    transition: .5s;
+    margin-right: -16px;
+  }
+
+  #block3 .coins-and-ideas {
+    transform: scale(1.5) translateX(70px) translateY(-50px);
+    transition: .5s;
+  }
+
+  #block4 .robot {
+    transform: scale(1.5) translateX(50px) translateY(50px);
+    transition: .5s;
+  }
+
+  #block4 .git-and-robonomics-margins {
+    transform: scale(1.5) translateX(-50px) translateY(25px);
+    transition: .5s;
+  }
+
+  #block5 .drone-and-margin {
+    transform: scale(1.5) translateX(100px);
+    transition: .5s;
+  }
+}
 
 @media screen and (min-width: 1630px) and (max-width: 1800px) {
   .wrapper .code-snippet {
@@ -861,6 +892,7 @@ a {
   border-radius: 50%;
   margin-left: 20px;
   background-color: white;
+  cursor: pointer;
 }
 
 .dot, .lines {
@@ -869,7 +901,7 @@ a {
   transition: all .5s;
 }
 
-.active {
+.active_el {
   opacity: 1;
   transition: all .5s;
 }
