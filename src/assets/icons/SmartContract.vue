@@ -167,7 +167,7 @@
               <tspan y="0" letter-spacing="0.029em">A</tspan>
               <tspan y="0" letter-spacing="0.005em">R</tspan>
               <tspan y="0">T</tspan>
-              <tspan y="0" letter-spacing="0.029em"></tspan>
+              <tspan y="0" letter-spacing="0.029em">&nbsp</tspan>
               <tspan y="0" letter-spacing="-0.063em">F</tspan>
               <tspan y="0" letter-spacing="0.019em">A</tspan>
               <tspan y="0" letter-spacing="0.015em">C</tspan>
