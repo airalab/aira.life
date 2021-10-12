@@ -59,7 +59,7 @@
                 </a>
               </div>
               <div>
-                <VavesBottom></VavesBottom>
+                <g-image src="~/assets/pngs/slide-2.png"/>
               </div>
             </div>
           </div>
@@ -73,9 +73,9 @@
           </div>
           <div class="block-content-wrapper hidden" id="block4">
             <div class="small-wrapper">AIRA<br/>
-              <span>is <a href="https://github.com/airalab/aira/releases" class="crossover">opensource</a> </span><br/>
+              <span>is <a href="https://github.com/airalab/aira/releases" class="crossover-bottom">opensource</a> </span><br/>
               <span>client in </span><br/>
-              <a href="https://robonomics.network" class="crossover-top">Robonomics Network</a>
+              <a href="https://robonomics.network" class="crossover-bottom">Robonomics Network</a>
             </div>
             <div>
               <div class="small-wrapper buttons margins-robonomics-network-buttons">
@@ -119,7 +119,6 @@
 import CoinsAndIdeas from "~/assets/icons/CoinsAndIdeas";
 import CodeSample from "~/components/CodeSample";
 import SmartContract from "~/assets/icons/SmartContract";
-import VavesBottom from "~/assets/icons/VavesBottom";
 import PlayButton from "~/assets/icons/PlayButton";
 import MoreButton from "~/assets/icons/MoreButton";
 import Robot from "../assets/icons/Robot";
@@ -132,7 +131,6 @@ export default {
     CoinsAndIdeas,
     CodeSample,
     SmartContract,
-    VavesBottom,
     PlayButton,
     MoreButton,
     Robot,
@@ -256,12 +254,6 @@ export default {
     transition: .5s;
   }
 
-  #block2 .solo-play-button ~div {
-    transform: scale(1.4);
-    transition: .5s;
-    margin-right: -16px;
-  }
-
   #block3 .coins-and-ideas {
     transform: scale(1.5) translateX(70px) translateY(-50px);
     transition: .5s;
@@ -339,6 +331,14 @@ export default {
     margin-top: -100px;
   }
 
+  #block2 .solo-play-button ~div img {
+    width: calc(100vw - 600px);
+    margin-top: -30px;
+    max-width: 800px;
+    margin-left: 50px;
+    transition: .5s;
+  }
+
   #block3 {
     width: 80vw;
     display: flex;
@@ -410,6 +410,14 @@ export default {
     transition: all .5s;
   }
 
+  #block2 .solo-play-button ~div img {
+    width: calc(100vw - 600px);
+    margin-top: 50px;
+    max-width: 700px;
+    margin-left: 50px;
+    transition: .5s;
+  }
+
   #block4 .git-and-robonomics-margins {
     margin: 0;
     top: 400px;
@@ -477,6 +485,14 @@ export default {
   #block2 .solo-play-button {
     margin-top: 0;
     transition: all .5s;
+  }
+
+  #block2 .solo-play-button ~div img {
+    width: calc(100vw - 200px);
+    margin-top: -40px;
+    max-width: 730px;
+    margin-left: -50px;
+    transition: .5s;
   }
 
   #block3 .coins-and-ideas {
@@ -556,6 +572,14 @@ export default {
     margin-left: -150px;
     margin-top: -30px;
     transition: all .5s;
+  }
+
+  #block2 .solo-play-button ~div img {
+    width: calc(100vw - 10px);
+    max-width: 700px;
+    margin-top: 0;
+    margin-left: 100px;
+    transition: .5s;
   }
 
   #block4 .robot-and-git-and-robonomics {
@@ -646,11 +670,6 @@ export default {
     transition: all .5s;
   }
 
-  .block-content-wrapper .small-wrapper {
-    transition: all .5s;
-    width: 70%;
-  }
-
   .steps .dot {
     margin-left: 0;
     width: 30px;
@@ -673,13 +692,29 @@ export default {
     transition: all .5s;
   }
 
-  #block2 .small-wrapper ~div :not(:first-child) {
-    margin-left: -50px;
+  #block2 .small-wrapper.buttons.solo-play-button {
+    margin-left: 40px;
+  }
+
+  #block2 .solo-play-button ~div img {
+    width: calc(100vw + 50px);
+    max-width: 500px;
+    margin-left: 50px;
+    transition: .5s;
+  }
+
+  #block3 .small-wrapper {
+    transition: all .5s;
+    width: 70%;
   }
 
   #block3.block-content-wrapper .coins-and-ideas {
     margin-top: 50px;
     transition: all .5s;
+  }
+
+  #block4 .block-content-wrapper .small-wrapper {
+    width: 100%;
   }
 
   #block4 .robot-and-git-and-robonomics {
@@ -716,44 +751,6 @@ a {
   display: flex;
 }
 
-.crossover {
-  display: inline;
-  background-color: transparent;
-  position: relative;
-}
-
-.crossover::before {
-  border-top: 10px solid #6CEEFF;
-  content: "";
-  margin: 0 auto; /* this centers the line to the full width specified */
-  position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
-  top: 50%;
-  left: 15px;
-  right: 0;
-  bottom: 0;
-  width: 115%;
-  z-index: -1;
-}
-
-.crossover-top {
-  display: inline;
-  background-color: transparent;
-  position: relative;
-}
-
-.crossover-top::before {
-  border-top: 10px solid #6CEEFF;
-  content: "";
-  margin: 0 auto;
-  position: absolute;
-  top: calc(50% - 15px);
-  left: 15px;
-  right: 0;
-  bottom: 0;
-  width: 110%;
-  z-index: -1;
-}
-
 .crossover-bottom {
   display: inline;
   background-color: transparent;
@@ -765,11 +762,11 @@ a {
   content: "";
   margin: 0 auto; /* this centers the line to the full width specified */
   position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
-  top: calc(50% + 5px);
-  left: 15px;
+  top: calc(50% + 10px);
+  left: 0;
   right: 0;
   bottom: 0;
-  width: 125%;
+  width: 100%;
   z-index: -1;
 }
 
@@ -779,6 +776,13 @@ a {
 
 .solo-play-button {
   margin-top: 50px;
+}
+
+.solo-play-button ~div img {
+  margin-left: -100px;
+  max-width: 1000px;
+  transition: all .5s;
+  margin-right: -16px;
 }
 
 .buttons {
@@ -812,7 +816,7 @@ a {
 }
 
 .margins-robonomics-network-buttons {
-  margin-top: -15px;
+  margin-top: 0;
   margin-left: 35px;
 }
 
