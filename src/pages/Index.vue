@@ -100,7 +100,7 @@
             <div>View <a href="https://wiki.robonomics.network/docs/aira-overview/" class="crossover-bottom">WIKI</a>
               and
               <br/>
-              try ARIA
+              try AIRA
             </div>
             <div class="drone-and-margin">
               <DroneAndHumanIllustration></DroneAndHumanIllustration>
